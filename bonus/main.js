@@ -99,8 +99,8 @@ function getImageHtml(image) {
 }
 
 function getItalianDate(date){
-  const myArray = date.split("/");
-  let dates = myArray[1] + "/" + myArray[0] + "/" + myArray[2]
+  const dateArray = date.split("/");
+  let dates = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2]
   return `${dates}`;
 }
 
