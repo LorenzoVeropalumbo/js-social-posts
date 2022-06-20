@@ -108,7 +108,7 @@ function getProfileInitialsHtml(name){
   const myArray = name.split(" ");
   const names = myArray[0][0] + myArray[myArray.length - 1][0];
   return`
-    <div class="profile-pic-default" alt="${name}">${names}</div> 
+    <div class="profile-pic-default">${names}</div> 
   `;
 }
 
@@ -129,7 +129,7 @@ for(let i = 0; i < btnLikeClickable.length; i++) {
     event.preventDefault();
 
     // Prenderci l'elemento html di testo che ha il numero relativo a questo btn
-     const relatedNumberText = btnLikeTexts[i];
+    const relatedNumberText = btnLikeTexts[i];
     // Ci prendiamo il numero dentro relatedNumberText
     let relatedNumber = parseInt(relatedNumberText.innerHTML);
 
