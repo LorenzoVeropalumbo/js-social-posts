@@ -59,8 +59,7 @@ function drawPost(userPost,postContainer){
       <div class="post__header">
         <div class="post-meta">                    
             <div class="post-meta__icon">
-              ${pictureProfile === null ? getProfileInitialsHtml(pictureProfile,name) : `<img class="profile-pic" src="${pictureProfile}" alt="${name}"></img>`} 
-                                 
+              ${pictureProfile === null ? getProfileInitialsHtml(name) : `<img class="profile-pic" src="${pictureProfile}" alt="${name}"></img>`}                          
             </div>
             <div class="post-meta__data">
                 <div class="post-meta__author">${name}</div>
@@ -101,24 +100,16 @@ function getImageHtml(image) {
 function getItalianDate(date){
   const dateArray = date.split("/");
   let dates = dateArray[1] + "/" + dateArray[0] + "/" + dateArray[2]
-  return `${dates}`;
+  return dates;
 }
 
-function getProfileInitialsHtml(pictureProfile,name){
+function getProfileInitialsHtml(name){
   
-  // const myArray = name.split(" ");
-  // for (let i = 0; i < myArray.length; i++) {
-  //   console.log( myArray[i]);
-
-  //   let firstName =
-  //   let secondName =
-
-  //   for (let j = 0; j < array.length; j++) {
-  //     const element = array[index];
-      
-  //   }
-  // }
-  return "";
+  const myArray = name.split(" ");
+  const names = myArray[0][0] + myArray[myArray.length - 1][0];
+  return`
+    <div class="profile-pic-default" alt="${name}">${names}</div> 
+  `;
 }
 
 // -------------------
