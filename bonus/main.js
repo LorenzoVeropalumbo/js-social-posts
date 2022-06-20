@@ -64,7 +64,7 @@ function drawPost(userPost,postContainer){
             </div>
             <div class="post-meta__data">
                 <div class="post-meta__author">${name}</div>
-                <div class="post-meta__time">${date}</div>
+                <div class="post-meta__time">${getItalianDate(date)}</div>
             </div>                    
         </div>
       </div>
@@ -98,14 +98,27 @@ function getImageHtml(image) {
   `;
 }
 
+function getItalianDate(date){
+  const myArray = date.split("/");
+  let dates = myArray[1] + "/" + myArray[0] + "/" + myArray[2]
+  return `${dates}`;
+}
+
 function getProfileInitialsHtml(pictureProfile,name){
   
-  const myArray = name.split(" ");
-  let j = 0;
-  for (let i = 0; i < myArray[].length; i++) {
-    console.log( myArray[i]);
-    j++;
-  }
+  // const myArray = name.split(" ");
+  // for (let i = 0; i < myArray.length; i++) {
+  //   console.log( myArray[i]);
+
+  //   let firstName =
+  //   let secondName =
+
+  //   for (let j = 0; j < array.length; j++) {
+  //     const element = array[index];
+      
+  //   }
+  // }
+  return "";
 }
 
 // -------------------
